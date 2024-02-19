@@ -11,7 +11,7 @@ public class TransactionMapper {
 
     public TransactionResponse toTransactionResponse (Transaction transaction){
         return TransactionResponse.builder()
-                .id(transaction.getTransaction_id())
+                .id(transaction.getId())
                 .amount(transaction.getAmount()).build();
     }
 }

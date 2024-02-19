@@ -1,15 +1,12 @@
 package com.bankAccount2.port;
 
 import com.bankAccount2.adapter.database.BankAccount;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
-import java.util.List;
-import java.util.Optional;
 
-public interface BankAccountRepositoryPort {
+@Repository
+public interface BankAccountRepositoryPort extends JpaRepository<BankAccount,Long> {
 
-    BigDecimal findBalance(Long id);
-    Optional<BankAccount> findById(Long id);
-    <S extends BankAccount> S save(BankAccount bankAccount);
-    List<BankAccount> findAll();
 }

@@ -10,10 +10,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TransactionRepository extends JpaRepository<Transaction,Long>, TransactionRepositoryPort {
+public interface TransactionRepository extends TransactionRepositoryPort {
 
     @Query("SELECT t FROM Transaction t WHERE t.bankAccount = ?1")
-    List<Transaction> findAllByBalanceAmountId(@Param("bankAccount") BankAccount bankAccount);
+    List<Transaction> findAllByBankAccount(@Param("bankAccount") BankAccount bankAccount);
 
 }
 

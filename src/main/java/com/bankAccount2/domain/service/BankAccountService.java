@@ -26,9 +26,6 @@ public class BankAccountService implements BankAccountPort {
     @Autowired
     private TransactionRepositoryPort transactionRepositoryPort;
 
-    @Autowired
-    private TransactionRepository transactionRepository;
-
     private final BankAccountMapper bankAccountMapper;
 
     private final TransactionMapper transactionMapper;
@@ -46,11 +43,11 @@ public class BankAccountService implements BankAccountPort {
         transaction.setAmount(amount);
         transaction.setBankAccount(bankAccount);
         bankAccountRepositoryPort.save(bankAccount);
-        transactionRepository.save(transaction);
+        transactionRepositoryPort.save(transaction);
     }
 
     public boolean withdraw(Long bankAccountId, BigDecimal amount) throws Exception {
-        if(bankAccountRepositoryPort.findBalance(bankAccountId).compareTo(amount) >0) {
+        if(bankAccountRepositoryPort.findById(bankAccountId).orElseThrow().getBalance().compareTo(amount) >0) {
             var bankAccount = bankAccountRepositoryPort.findById(bankAccountId)
                     .orElseThrow(() -> new Exception());
             bankAccount.setBalance(bankAccount.getBalance().subtract(amount));
@@ -62,12 +59,12 @@ public class BankAccountService implements BankAccountPort {
     }
 
     public BigDecimal listBalance(Long bankAccountId) {
-        return bankAccountRepositoryPort.findBalance(bankAccountId);
+        return bankAccountRepositoryPort.findById(bankAccountId).orElseThrow().getBalance();
     }
 
     public List<TransactionResponse> listTransactions(Long bankAccountId) {
         var bankAccount = bankAccountRepositoryPort.findById(bankAccountId).orElseThrow();
-        return transactionRepositoryPort.findAllByBalanceAmountId(bankAccount).stream().map(transactionMapper::toTransactionResponse).collect(Collectors.toList());
+        return transactionRepositoryPort.findAllByBankAccount(bankAccount).stream().map(transactionMapper::toTransactionResponse).collect(Collectors.toList());
     }
 
     public List<BankAccountResponse> findAll() {

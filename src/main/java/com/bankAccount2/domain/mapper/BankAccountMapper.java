@@ -11,7 +11,7 @@ public class BankAccountMapper {
 
     public BankAccountResponse toBankAccountResponse (BankAccount bankAccount){
         return BankAccountResponse.builder()
-                .id(bankAccount.getBankaccount_id())
+                .id(bankAccount.getId())
                 .balance(bankAccount.getBalance()).build();
     }
 }

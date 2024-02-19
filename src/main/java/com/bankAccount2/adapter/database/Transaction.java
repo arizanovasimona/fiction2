@@ -1,10 +1,9 @@
 package com.bankAccount2.adapter.database;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-
-import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
@@ -20,8 +19,8 @@ public class Transaction implements Serializable {
 
     @Id
     @Column (name = "transaction_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long transaction_id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     @Column
     private BigDecimal amount;
@@ -30,8 +29,4 @@ public class Transaction implements Serializable {
     @JoinColumn(name = "bankaccount_id", nullable=false)
     private BankAccount bankAccount;
 
-    public Transaction(BigDecimal amount, BankAccount bankAccount) {
-        this.amount = amount;
-        this.bankAccount = bankAccount;
-    }
 }
