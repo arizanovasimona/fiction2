@@ -1,7 +1,7 @@
-package com.bankAccount2.domain.mapper;
+package com.bankAccount.domain.mapper;
 
-import com.bankAccount2.adapter.API.BankAccountResponse;
-import com.bankAccount2.adapter.database.BankAccount;
+import com.bankAccount.adapter.API.BankAccountResponse;
+import com.bankAccount.adapter.database.BankAccount;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 

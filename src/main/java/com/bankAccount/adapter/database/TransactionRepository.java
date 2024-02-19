@@ -1,8 +1,6 @@
-package com.bankAccount2.adapter.database;
+package com.bankAccount.adapter.database;
 
-import com.bankAccount2.port.TransactionRepositoryPort;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.bankAccount.port.TransactionRepositoryPort;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;

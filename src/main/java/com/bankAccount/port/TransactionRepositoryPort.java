@@ -1,7 +1,7 @@
-package com.bankAccount2.port;
+package com.bankAccount.port;
 
-import com.bankAccount2.adapter.database.BankAccount;
-import com.bankAccount2.adapter.database.Transaction;
+import com.bankAccount.adapter.database.BankAccount;
+import com.bankAccount.adapter.database.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

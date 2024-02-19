@@ -1,4 +1,4 @@
-package com.bankAccount2.adapter.database;
+package com.bankAccount.adapter.database;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -25,4 +25,7 @@ public class BankAccount implements Serializable {
     @Column
     private BigDecimal balance;
 
+    public BankAccount(BigDecimal balance) {
+        this.balance = balance;
+    }
 }

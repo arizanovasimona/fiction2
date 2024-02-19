@@ -1,15 +1,13 @@
-package com.bankAccount2.domain.service;
+package com.bankAccount.domain.service;
 
-import com.bankAccount2.adapter.API.BankAccountResponse;
-import com.bankAccount2.adapter.API.TransactionResponse;
-import com.bankAccount2.adapter.database.BankAccountRepository;
-import com.bankAccount2.adapter.database.Transaction;
-import com.bankAccount2.adapter.database.TransactionRepository;
-import com.bankAccount2.domain.mapper.BankAccountMapper;
-import com.bankAccount2.domain.mapper.TransactionMapper;
-import com.bankAccount2.port.BankAccountPort;
-import com.bankAccount2.port.BankAccountRepositoryPort;
-import com.bankAccount2.port.TransactionRepositoryPort;
+import com.bankAccount.adapter.API.BankAccountResponse;
+import com.bankAccount.adapter.API.TransactionResponse;
+import com.bankAccount.adapter.database.Transaction;
+import com.bankAccount.domain.mapper.BankAccountMapper;
+import com.bankAccount.domain.mapper.TransactionMapper;
+import com.bankAccount.port.BankAccountPort;
+import com.bankAccount.port.BankAccountRepositoryPort;
+import com.bankAccount.port.TransactionRepositoryPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,6 @@
-package com.bankAccount2.adapter.API;
+package com.bankAccount.adapter.API;
 
-import com.bankAccount2.adapter.database.BankAccount;
-import com.bankAccount2.domain.service.BankAccountService;
+import com.bankAccount.domain.service.BankAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

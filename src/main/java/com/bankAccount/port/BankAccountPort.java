@@ -1,7 +1,7 @@
-package com.bankAccount2.port;
+package com.bankAccount.port;
 
-import com.bankAccount2.adapter.API.BankAccountResponse;
-import com.bankAccount2.adapter.API.TransactionResponse;
+import com.bankAccount.adapter.API.BankAccountResponse;
+import com.bankAccount.adapter.API.TransactionResponse;
 
 import java.math.BigDecimal;
 import java.util.List;

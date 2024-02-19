@@ -1,11 +1,8 @@
-package com.bankAccount2.adapter.database;
+package com.bankAccount.adapter.database;
 
-import com.bankAccount2.port.BankAccountRepositoryPort;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
+import com.bankAccount.port.BankAccountRepositoryPort;
 import org.springframework.stereotype.Repository;
 
-import java.math.BigDecimal;
 import java.util.Optional;
 
 @Repository

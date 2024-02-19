@@ -1,7 +1,6 @@
-package com.bankAccount2.domain.model;
+package com.bankAccount.domain.model;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 public class BankAccount {
 

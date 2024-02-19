@@ -1,4 +1,4 @@
-package com.bankAccount2.adapter.database;
+package com.bankAccount.adapter.database;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

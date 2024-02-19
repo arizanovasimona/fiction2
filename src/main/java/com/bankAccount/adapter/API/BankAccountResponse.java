@@ -1,4 +1,4 @@
-package com.bankAccount2.adapter.API;
+package com.bankAccount.adapter.API;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
